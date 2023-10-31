@@ -1,5 +1,7 @@
+import { ConfettiProvider } from "@/components/providers/ConfettiProvider";
 import { Navbar } from "./_components/Navbar";
 import { Sidebar } from "./_components/Sidebar";
+import { ToastProvider } from "@/components/providers/ToastProvider";
 
 const DashboardLayout = ({
   children
@@ -15,6 +17,8 @@ const DashboardLayout = ({
         <Sidebar />
       </div>
       <main className="md:pl-56 pt-[80px] h-full">
+        <ConfettiProvider/>
+        <ToastProvider/>
         {children}
       </main>
     </div>
